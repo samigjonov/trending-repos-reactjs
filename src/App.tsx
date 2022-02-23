@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.scss';
+import { Header } from './components/shared/header/Header';
 
-function App() {
-  return <h1>Trending Repos ReactJS</h1>;
-}
-
+const App = () => (
+  <div className="container">
+    <Header />
+  </div>
+);
 export default App;
