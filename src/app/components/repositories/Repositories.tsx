@@ -7,7 +7,7 @@ import { LanguageFilter } from '../shared/language-filter/LanguageFilter';
 import './Repositories.scss';
 
 export const Repositories = () => {
-  const { repositories, fetchRepositories, loading } = useRepositoryContext();
+  const { repositories, fetchRepositories, loading, languages } = useRepositoryContext();
   const [activeFilter, setActiveFilter] = useState('');
   const [onlyFavorite, setOnlyFavorite] = useState(false);
 
@@ -49,7 +49,7 @@ export const Repositories = () => {
           </label>
         </fieldset>
       </div>
-      <LanguageFilter activeFilter={activeFilter} onFilter={setActiveFilter} />
+      <LanguageFilter activeFilter={activeFilter} onFilter={setActiveFilter} languages={languages} />
       <RepositoryList repositories={filteredRepositories} />
     </section>
   )

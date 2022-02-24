@@ -3,7 +3,7 @@ export interface IRepository {
   name: string;
   description: string;
   html_url: string;
-  stargazers_count: string;
+  stargazers_count: number;
   language: string;
   favorite?: boolean;
 }

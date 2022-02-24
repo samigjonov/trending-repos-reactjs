@@ -1,16 +1,14 @@
 import * as React from 'react';
-import { useRepositoryContext } from '../../../contexts/repository.context';
 
 import './LanguageFilter.scss';
 
 interface IProps {
   activeFilter: string;
   onFilter: (language: string) => void;
+  languages: string[];
 }
 
-export const LanguageFilter = ({ activeFilter, onFilter }: IProps) => {
-  const { languages } = useRepositoryContext();
-
+export const LanguageFilter = ({ activeFilter, onFilter, languages }: IProps) => {
   const onFilterSelect = (language: string) => {
     if (activeFilter === language) {
       onFilter('');
