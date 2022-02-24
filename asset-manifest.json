@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/trending-repos-reactjs/static/css/main.58e74b40.css",
-    "main.js": "/trending-repos-reactjs/static/js/main.5ce21d64.js",
+    "main.js": "/trending-repos-reactjs/static/js/main.6cafd79f.js",
     "static/js/787.d645b347.chunk.js": "/trending-repos-reactjs/static/js/787.d645b347.chunk.js",
     "index.html": "/trending-repos-reactjs/index.html",
     "main.58e74b40.css.map": "/trending-repos-reactjs/static/css/main.58e74b40.css.map",
-    "main.5ce21d64.js.map": "/trending-repos-reactjs/static/js/main.5ce21d64.js.map",
+    "main.6cafd79f.js.map": "/trending-repos-reactjs/static/js/main.6cafd79f.js.map",
     "787.d645b347.chunk.js.map": "/trending-repos-reactjs/static/js/787.d645b347.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.58e74b40.css",
-    "static/js/main.5ce21d64.js"
+    "static/js/main.6cafd79f.js"
   ]
 }
