@@ -11,6 +11,7 @@ interface IProps {
 export const RepositoryItem = ({ repository, onFavorite, onUnfavorite }: IProps) => {
 
   const description = repository.description || 'No description is provided...';
+  const actionText = repository.favorite ? 'Remove from the favorites' : 'Add to the favorites';
 
   return (
     <article className="repository">
@@ -29,7 +30,8 @@ export const RepositoryItem = ({ repository, onFavorite, onUnfavorite }: IProps)
       <section className="repository__description">
         <p>{description}</p>
         <button
-          data-tooltip={repository.favorite ? 'Remove from the favorites' : 'Add to the favorites'}
+          aria-label={actionText}
+          data-tooltip={actionText}
           className={repository.favorite ? '' : 'outline'}
           onClick={repository.favorite ? onUnfavorite.bind(null, repository.id) : onFavorite.bind(null, repository.id)}
         >

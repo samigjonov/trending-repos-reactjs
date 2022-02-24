@@ -13,11 +13,11 @@ export const Repositories = () => {
 
   useEffect(() => {
     fetchRepositories();
-  }, []);
+  }, [fetchRepositories]);
 
   if (loading) {
     return (
-      <a href="#" aria-busy="true">Loading repositories, please wait…</a>
+      <a href="/" aria-busy="true">Loading repositories, please wait…</a>
     );
   }
 
@@ -39,6 +39,8 @@ export const Repositories = () => {
         <fieldset>
           <label htmlFor="switch">
             <input
+              aria-label="Show only favorite switcher"
+              aria-required="true"
               type="checkbox"
               id="switch"
               name="switch"

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import dayjs from 'dayjs';
-import { createContext, FC, ReactNode, useContext, useState } from 'react';
+import { createContext, FC, ReactNode, useCallback, useContext, useState } from 'react';
 import { IRepository } from '../interfaces/repository.interface';
 import { environment } from '../../environments/environment';
 
@@ -29,7 +29,7 @@ export const RepositoryContextProvider: FC<IProps> = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [languages, setLanguages] = useState<string[]>([]);
 
-  const fetchRepositories = () => {
+  const fetchRepositories = useCallback(() => {
     setLoading(true);
     const favorites = getFavorites();
     axios.get(`${environment.API.GITHUB_REPOS_URL}?q=created:%3E${date}&sort=stars&order=desc`)
@@ -45,7 +45,7 @@ export const RepositoryContextProvider: FC<IProps> = ({ children }) => {
       .finally(() => {
         setLoading(false);
       });
-  };
+  }, [date]);
 
   const updateRepositories = () => {
     const favorites = getFavorites();

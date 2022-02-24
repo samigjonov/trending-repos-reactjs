@@ -21,6 +21,7 @@ export const LanguageFilter = ({ activeFilter, onFilter, languages }: IProps) =>
     const extraClass = activeFilter === language ? '' : 'outline';
     return (
       <button
+        aria-label={`${language} filter`}
         key={index}
         className={`language-filter__button ${extraClass}`}
         onClick={onFilterSelect.bind(null, language)}
