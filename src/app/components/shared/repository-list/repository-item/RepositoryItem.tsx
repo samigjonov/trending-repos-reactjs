@@ -10,22 +10,24 @@ interface IProps {
 
 export const RepositoryItem = ({ repository, onFavorite, onUnfavorite }: IProps) => {
 
+  const description = repository.description || 'No description is provided...';
+
   return (
     <article className="repository">
       <section className="repository__info">
         <p>
-          <strong>Name:</strong>{' '}
+          <strong><i className="fa-solid fa-box-open" /> Name:</strong>{' '}
           <a href={repository.html_url}>
             {repository.name}
           </a>
         </p>
         <p>
-          <strong>Stars: </strong>{' '}
+          <strong><i className="fa-solid fa-star" /> Stars: </strong>{' '}
           {repository.stargazers_count}
         </p>
       </section>
       <section className="repository__description">
-        <p>{repository.description}</p>
+        <p>{description}</p>
         <button
           data-tooltip={repository.favorite ? 'Remove from the favorites' : 'Add to the favorites'}
           className={repository.favorite ? '' : 'outline'}

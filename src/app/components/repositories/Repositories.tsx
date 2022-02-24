@@ -32,7 +32,10 @@ export const Repositories = () => {
   return (
     <section className="repositories">
       <div className="repositories__header">
-        <h6>List of trending repositories</h6>
+        <h6>
+          <i className="fa-solid fa-rocket" />{' '}
+          List of trending repositories
+        </h6>
         <fieldset>
           <label htmlFor="switch">
             <input

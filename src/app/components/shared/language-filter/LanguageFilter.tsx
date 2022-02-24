@@ -11,13 +11,21 @@ interface IProps {
 export const LanguageFilter = ({ activeFilter, onFilter }: IProps) => {
   const { languages } = useRepositoryContext();
 
+  const onFilterSelect = (language: string) => {
+    if (activeFilter === language) {
+      onFilter('');
+    } else {
+      onFilter(language);
+    }
+  };
+
   const languageFilters = languages.map((language, index) => {
     const extraClass = activeFilter === language ? '' : 'outline';
     return (
       <button
         key={index}
         className={`language-filter__button ${extraClass}`}
-        onClick={onFilter.bind(null, language)}
+        onClick={onFilterSelect.bind(null, language)}
       >
         {language}
       </button>
