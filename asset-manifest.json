@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/samigjonov/trending-repos-reactjs/static/css/main.58e74b40.css",
+    "main.js": "/samigjonov/trending-repos-reactjs/static/js/main.d02a2ecb.js",
+    "static/js/787.d645b347.chunk.js": "/samigjonov/trending-repos-reactjs/static/js/787.d645b347.chunk.js",
+    "index.html": "/samigjonov/trending-repos-reactjs/index.html",
+    "main.58e74b40.css.map": "/samigjonov/trending-repos-reactjs/static/css/main.58e74b40.css.map",
+    "main.d02a2ecb.js.map": "/samigjonov/trending-repos-reactjs/static/js/main.d02a2ecb.js.map",
+    "787.d645b347.chunk.js.map": "/samigjonov/trending-repos-reactjs/static/js/787.d645b347.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58e74b40.css",
+    "static/js/main.d02a2ecb.js"
+  ]
+}
