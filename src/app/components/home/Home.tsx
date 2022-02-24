@@ -1,20 +1,12 @@
-import React, { useEffect } from 'react';
-import { useRepositoryContext } from '../../contexts/repository.context';
+import React from 'react';
+import { Repositories } from '../repositories/Repositories';
+
 import './Home.scss';
 
 export const Home = () => {
-
-  const { repositories, fetchRepositories } = useRepositoryContext();
-
-  useEffect(() => {
-    fetchRepositories();
-  }, []);
-
-  console.log(repositories);
-
   return (
     <section>
-      <h6>List of trending repositories</h6>
+      <Repositories />
     </section>
   )
 };

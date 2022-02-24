@@ -1,1 +1,8 @@
 @import "~@picocss/pico/scss/pico";
+
+@media (min-width: 992px) {
+  article, section {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+}

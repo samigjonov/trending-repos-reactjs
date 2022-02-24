@@ -1,0 +1,7 @@
+.repository {
+  display: flex;
+
+  &__info, &__description {
+    flex: 50%;
+  }
+}

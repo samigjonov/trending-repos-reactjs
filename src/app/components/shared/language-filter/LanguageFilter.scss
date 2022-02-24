@@ -1,0 +1,10 @@
+.language-filter {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__button {
+    display: inline-block;
+    width: auto;
+    margin: 0.5rem;
+  }
+}
