@@ -5,4 +5,5 @@ export interface IRepository {
   html_url: string;
   stargazers_count: string;
   language: string;
+  favorite?: boolean;
 }
